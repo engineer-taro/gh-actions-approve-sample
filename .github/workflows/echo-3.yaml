@@ -17,3 +17,14 @@ jobs:
       - name: Echo
         run: |
           echo "Hello, world 3!"
+
+      - name: Echo repository variables (secure method)
+        env:
+          # セキュリティのため、中間環境変数を使用
+          ONLY_REPO_VAR_TEST: ${{ vars.ONLY_REPO_VAR_TEST }}
+          TEST: ${{ vars.TEST }}
+        run: |
+          echo "=== Repository Variables ==="
+          echo "ONLY_REPO_VAR_TEST: $ONLY_REPO_VAR_TEST"
+          echo "TEST: $TEST"
+          echo "==========================="
