@@ -1,4 +1,4 @@
-name: echo-3
+name: echo-4-no-approve
 
 on:
   push:

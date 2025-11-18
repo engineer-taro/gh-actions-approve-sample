@@ -1,4 +1,4 @@
-name: echo-2
+name: echo-1
 
 on:
   push:
